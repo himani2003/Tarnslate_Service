@@ -167,6 +167,7 @@ async def translate_to_hindi(request: TranslateRequest):
         translated_text = "\n".join(translated_chunks)
 
         # Return the translated text as plain text
+        print(PlainTextResponse(content=translated_text, media_type="text/plain"))
         return PlainTextResponse(content=translated_text, media_type="text/plain")
 
     except Exception as e:
