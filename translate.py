@@ -155,6 +155,8 @@ async def translate_to_hindi(request: TranslateRequest):
         PlainTextResponse: Translated text in Hindi as plain text.
     """
     try:
+        print(request)
+        print(request.insert)
         # Split the input text into manageable chunks
         chunks = split_text_into_chunks(request.insert)
 
